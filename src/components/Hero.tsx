@@ -1,33 +1,39 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-function AuraOrb() {
+function AuraShowcase() {
   return (
     <div className="relative w-72 h-72 md:w-96 md:h-96">
       {/* Outer glow */}
       <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00C9B8]/30 via-[#0085FF]/20 to-[#FF6B6B]/10 blur-3xl animate-pulse-glow" />
 
       {/* Rotating ring */}
-      <div className="absolute inset-4 rounded-full border border-[#00C9B8]/20 animate-rotate-slow" />
+      <div className="absolute inset-2 rounded-full border border-[#00C9B8]/20 animate-rotate-slow" />
       <div
-        className="absolute inset-8 rounded-full border border-[#0085FF]/15 animate-rotate-slow"
+        className="absolute inset-5 rounded-full border border-[#0085FF]/15 animate-rotate-slow"
         style={{ animationDirection: "reverse", animationDuration: "30s" }}
       />
 
-      {/* Core orb */}
+      {/* Aura showcase image */}
       <motion.div
-        animate={{ scale: [1, 1.08, 1], rotate: [0, 5, -5, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute inset-12 rounded-full bg-gradient-to-br from-[#00C9B8] via-[#0085FF] to-[#7C3AED] shadow-2xl"
+        animate={{ scale: [1, 1.04, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute inset-6 rounded-full overflow-hidden shadow-2xl"
         style={{
           boxShadow:
-            "0 0 80px rgba(0, 201, 184, 0.4), 0 0 160px rgba(0, 133, 255, 0.2), inset 0 0 60px rgba(255, 255, 255, 0.1)",
+            "0 0 80px rgba(0, 201, 184, 0.3), 0 0 160px rgba(0, 133, 255, 0.15)",
         }}
-      />
-
-      {/* Inner highlight */}
-      <div className="absolute inset-16 rounded-full bg-gradient-to-br from-white/20 to-transparent" />
+      >
+        <Image
+          src="/aura-showcase.jpg"
+          alt="AI-generated aura portrait"
+          fill
+          className="object-cover"
+          priority
+        />
+      </motion.div>
 
       {/* Floating particles */}
       {[...Array(6)].map((_, i) => (
@@ -35,8 +41,8 @@ function AuraOrb() {
           key={i}
           className="absolute w-1.5 h-1.5 rounded-full bg-[#00C9B8]/60"
           style={{
-            top: `${20 + Math.random() * 60}%`,
-            left: `${20 + Math.random() * 60}%`,
+            top: `${15 + Math.random() * 70}%`,
+            left: `${15 + Math.random() * 70}%`,
           }}
           animate={{
             y: [0, -15, 0],
@@ -79,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="animate-float"
         >
-          <AuraOrb />
+          <AuraShowcase />
         </motion.div>
 
         {/* Headline */}
