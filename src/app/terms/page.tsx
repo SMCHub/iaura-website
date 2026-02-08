@@ -213,8 +213,10 @@ export default function TermsOfService() {
               If you have any questions about these Terms of Service, please contact us at:
             </p>
             <ul className="list-none space-y-1 mt-3">
-              <li>Email: <a href="mailto:legal@iaura.app" className="text-[#00C9B8] hover:underline">legal@iaura.app</a></li>
-              <li>Website: <a href="https://iaura.app" className="text-[#00C9B8] hover:underline">iaura.app</a></li>
+              <li><strong>Brand Agent GmbH</strong></li>
+              <li>Hammerstrasse 5, 6312 Steinhausen</li>
+              <li>UID: CHE-204.407.181</li>
+              <li>Email: <a href="mailto:info@brandagent.ch" className="text-[#00C9B8] hover:underline">info@brandagent.ch</a></li>
             </ul>
           </section>
         </div>
@@ -223,7 +225,7 @@ export default function TermsOfService() {
       {/* Footer */}
       <footer className="border-t border-white/5 py-8">
         <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-sm">&copy; {new Date().getFullYear()} iAura. All rights reserved.</p>
+          <p className="text-gray-600 text-sm">&copy; {new Date().getFullYear()} Brand Agent GmbH. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="text-sm text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/" className="text-sm text-gray-500 hover:text-white transition-colors">Home</Link>

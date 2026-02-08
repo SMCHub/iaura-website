@@ -93,10 +93,10 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:support@iaura.app"
+                  href="mailto:info@brandagent.ch"
                   className="text-sm text-gray-500 hover:text-white transition-colors"
                 >
-                  support@iaura.app
+                  info@brandagent.ch
                 </a>
               </li>
               <li>
@@ -122,7 +122,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} iAura. All rights reserved.
+            &copy; {new Date().getFullYear()} Brand Agent GmbH. All rights reserved.
           </p>
           <p className="text-gray-700 text-xs">
             Made with AI. Built for self-discovery.
